@@ -1,0 +1,75 @@
+{
+  "Settings": {
+    "Setting": [
+      {
+        "Name": "ProjectName",
+        "Value": "LTI Tools",
+        "Description": "The name of the project"
+      },
+      {
+        "Name": "BaseNamespace",
+        "Value": "CODEiverse.LTITools",
+        "Description": "A reasonable base Namespace (to be used as a base namespace for code)"
+      },
+      {
+        "Name": "GoogleResourceList",
+        "Value": "Descriptions",
+        "Description": "A list of description resources",
+        "Prefix": "Description",
+        "GoogleKey": "1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM",
+        "GID": "0"
+      },
+      {
+        "Name": "GoogleResourceList",
+        "Value": "Properties",
+        "Description": "A list of attribute resource",
+        "Prefix": "Attributes",
+        "GoogleKey": "1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM",
+        "GID": "0"
+      },
+      {
+        "Name": "GoogleResourceList",
+        "Value": "SampleData",
+        "Description": "A list of sample values",
+        "Prefix": "SampleValues",
+        "GoogleKey": "1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM",
+        "GID": "0"
+      },
+      {
+        "Name": "GoogleResourceList",
+        "Value": "AdditionalResources",
+        "Description": "A list of additional resources",
+        "GoogleKey": "1z8dMBsR4IaKN9YV64sbbIuxguFqApaIyxKnkQv6MHnA",
+        "GID": "0"
+      },
+      {
+        "Name": "ChameleonCodeHostUri",
+        "Value": "https://eejai42.sdks.codeiverse.com/",
+        "Description": "The root path to the SDK Doc Host"
+      },
+      {
+        "Name": "ChameleonCodeSDKUri",
+        "Value": "LTIToolsSDK/",
+        "Description": "The relative path within the dochost",
+        "Default Value": "ChameleonCode/"
+      },
+      {
+        "Name": "ChameleonCodeSDKPath",
+        "Value": "lti-outcome-provider/ChameleonCodeSDK/",
+        "Description": "The physical path to the doc host folder relative to the CODEE_ROOT_PATH",
+        "Default Value": "ChameleonCodeSDK\\"
+      },
+      {
+        "Name": "Language1",
+        "Value": "EN",
+        "Description": "The primary language",
+        "Default Value": "EN"
+      },
+      {
+        "Name": "Language2",
+        "Description": "Additional languages",
+        "Default Value": "NA"
+      }
+    ]
+  }
+}

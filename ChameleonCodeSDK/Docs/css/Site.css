@@ -1,0 +1,333 @@
+﻿body {
+    font-size: 1.3em;
+    min-height: 30em;
+}
+
+/* Button type specific control*/
+
+#confirm-btn {
+    background-color: #63c400;
+    border-color: #63c400;
+    color: white;
+}
+
+#confirm-btn:hover {
+    background-color: #55a800;
+    border-color: #55a800;
+}
+
+#confirm-btn[disabled]:hover {
+    background-color: #70d10f;
+    border-color: #70d10f;
+    opacity: .6;
+}
+
+#cancel-btn {
+    color: #d9534f;
+    background-color: white;
+    border-color: #d9534f;
+}
+
+#cancel-btn:hover {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    color: white;
+}
+
+
+
+
+
+.growl-item.icon>.growl-message {
+    margin-left: 3.5em;
+}
+
+.section-highlight {
+    border: dashed 3px yellow;
+    padding: 1em;
+    margin: 0em;
+}
+
+
+.social-links li a, 
+.social-links.radius-5px li a  {
+    height: 33px;
+    width: 33px;
+}
+
+.social-links li a i,
+.social-links.radius-5px li a i {
+    line-height: 0px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.settings-container {
+    padding: 1em;
+}
+
+.invoiced-event,
+.invoiced-event div,
+.invoiced-event span {
+    background-color: #EEEEEE;
+    color: #666666;
+}
+
+.other-studio-event,
+.other-studio-event div,
+.other-studio-event span {
+    background-color: #EFEFEF;
+    color: #808080;
+    border: 0px solid red;
+}
+
+a {
+    cursor: pointer;
+}
+
+.well {
+    margin: 0.2em;
+    padding: 0.4em;
+}
+
+.fc-event,
+.fc-event * {
+   border: 0px solid red;
+}
+
+.tab-content {
+    background-color: yellow;
+}
+
+.animate-if {
+}
+
+
+md-input-container .md-input.ng-invalid::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #900;
+}
+md-input-container .md-input.ng-invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #F00;
+   opacity:  0.5;
+}
+md-input-container .md-input.ng-invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #F00;
+   opacity:  0.5;
+}
+md-input-container .md-input.ng-invalid:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #900;
+} 
+    
+
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  opacity:1;
+}
+
+md-input-container {
+    padding: 2px;
+    line-height: 1em;
+}
+
+.btn.btn-sm {
+    padding: 2px;
+    color: red;
+}
+
+.editableLabel {
+    font-weight: bold;
+    padding: 0.2em;
+    float: left;
+}
+
+md-input-container.md-icon-float > label {
+    margin-left: 0.0em;
+    padding-left: 0.0em;
+}
+
+md-input-container > label {
+    margin-left: 0.0em;
+    padding-left: 0.0em;
+}
+md-input-container .md-input {
+    border-color: darkblue;
+    font-weight: bold;
+}
+
+
+div[contentEditable]:focus {
+    width: 14em;
+}
+
+.loading-spiner-holder {
+    position: fixed; /* or absolute */
+    top: 5em;
+    left: 50%;
+}
+
+.header {
+    margin-top: -2em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+}
+
+
+
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #DDDDDD;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #DDDDDD;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #DDDDDD;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #DDDDDD;
+}
+
+
+
+/* MD Classes*/
+
+
+md-input-container .md-errors-spacer {
+  min-height: 10px;
+  min-width: 0px;
+}
+
+.short-text {
+  max-width: 6em;
+}
+
+.len {
+  margin-left: 3 em;
+  padding-top: .7em;
+  font-size: 100%;
+  color: rgb(140, 140, 140);
+}
+
+.lenTime {
+  margin-left: .7em;
+}
+
+.reoccursWeekly {
+  font-size: 90%;
+  color: rgb(140, 140, 140);
+}
+
+.nameAddressForm {
+  max-width: 23em;
+  margin: 1em;
+  margin-top: 0em;
+}
+
+.dateAndTime {
+  max-width: 23em;
+  margin: 1em;
+}
+
+.short-text {
+  max-width: 6em;
+  margin-right: .3em;
+}
+
+.md-button.md-icon-button {
+  margin: 0 0px;
+  padding: 0px;
+}
+
+.md-inline-form md-datepicker {
+  margin-top: 0px;
+}
+
+md-icon {
+  height: 2em;
+  width: 2em;
+}
+
+md-datepicker {
+  margin-right: 0px;
+  padding-right: .5em;
+}
+
+.md-datepicker-input-container {
+  margin-left: 0px;
+  padding-bottom: 0px;
+}
+
+md-input-container {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 0.5em;
+}
+
+md-input-container .md-input {
+  padding-top: .0em;
+}
+
+.md-input {
+  padding-top: .0em;
+  padding-left: 0.2em;
+}
+
+.md-inline-form md-checkbox {
+  margin-top: .5em;
+  margin-bottom: 0px;
+  margin-left: .6em;
+}
+
+md-input-container .md-errors-spacer {
+  min-height: 0px;
+  max-height: 0px;
+}
+
+md-input-container > md-select {
+  margin-left: .5em;
+}
+
+md-input-container ng-messages,
+md-input-container data-ng-messages,
+md-input-container x-ng-messages,
+md-input-container [ng-messages],
+md-input-container [data-ng-messages],
+md-input-container [x-ng-messages] {
+  margin-left: .6em;
+  max-width: 7.5em;
+}

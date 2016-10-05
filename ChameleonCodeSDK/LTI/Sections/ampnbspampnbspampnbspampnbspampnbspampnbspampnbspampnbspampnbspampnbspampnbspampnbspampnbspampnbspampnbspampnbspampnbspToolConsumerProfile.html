@@ -1,0 +1,213 @@
+<html><head><title>7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tool Consumer Profile</title></head><body><LTIDocs><div><h3><h1 class=" toc-headings">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tool Consumer Profile<toc class="toc-7"></toc></h1></h3><p>A Tool Consumer may provide a profile to a tool provider to disclose the services which are available.&nbsp; The profile follows the same format as LTI 2 and hence replicates some information which is provided as part of a basic launch request.&nbsp; Supporting this facility is recommended.</p><p>In order to support the tool consumer profile described in this section, a custom parameter substitution variable named $ToolConsumerProfile.url should be defined which is substituted for the URL from which a tool consumer profile may be requested when processing a basic LTI launch request (see Appendix C &ndash; Custom Parameter Substitution).&nbsp; This URL should be no more than 1023 characters long and should specify the version of LTI by adding an <em>lti_version</em> query parameter to the URL.&nbsp; The value should not normally change from one launch to the next and in general, the Tool Provider can expect that there is a one-to-one mapping between the URL and a particular oauth_consumer_key.&nbsp; This value might change if there was a significant re-configuration of the Tool Consumer system or if the Tool Consumer moved from one domain to another.&nbsp; The Tool Consumer may use the <em>Expires</em> header to indicate the period of validity for the profile being returned.&nbsp; It may also provide a unique profile URL for each Tool provider.</p><p>Unless there is a reason to name the parameter differently, it is recommended that a custom parameter name of tc_profile_url when a TP requests the TC profile URL.&nbsp; That is, use a custom parameter setting of:</p><p>tc_profile_url=$ToolConsumerProfile.url</p><p>This convention can be used by Tool Consumers to implement a simple checkbox interface to indicate that this URL should be generated and passed on each launch, rather than expecting the custom parameter to be specified in full.</p><p>Figure 7.1 provides a complete example Tool Consumer profile, which is be a JSON document with a media type of <em>application/vnd.ims.lti.v2.toolconsumerprofile+json</em>.</p><p>&nbsp;</p><pre>
+{
+
+  "@context":[
+
+    "http://purl.imsglobal.org/ctx/lti/v2/ToolConsumerProfile",
+
+    {
+
+      "tcp":"https://lms.example.com/profile/b6ffa601-ce1d-4549-9ccf-145670a964d4"
+
+    }
+
+  ],
+
+  "@type":"ToolConsumerProfile",
+
+  "@id":"http://lms.example.com/profile/b6ffa601-ce1d-4549-9ccf-145670a964d4",
+
+  "lti_version":"LTI-1p0",
+
+  "guid":"b6ffa601-ce1d-4549-9ccf-145670a964d4",
+
+  "product_instance":{
+
+    "guid":"c86542d5-fde1-4aae-ae18-7018089fddcd",
+
+    "product_info":{
+
+      "product_name":{
+
+        "default_value":"Omega LMS",
+
+        "key":"product.name"
+
+      },
+
+      "product_version":"2.3",
+
+      "description":{
+
+        "default_value":"A fictitious Learning Management System",
+
+        "key":"product.description"
+
+      },
+
+      "technical_description":{
+
+        "default_value":"LTI 1.2 compliant",
+
+        "key":"product.technicalDescription"
+
+      },
+
+      "product_family":{
+
+        "code":"omega",
+
+        "vendor":{
+
+">
+           "code":"lms.example.com",
+
+          "vendor_name":{
+
+            "default_value":"LMS Corporation",
+
+            "key":"product.vendor.name"
+
+          },
+
+          "description":{
+
+            "default_value":"A fictitious vendor of a Learning Management System",
+
+            "key":"product.vendor.description"
+
+          },
+
+          "website":"http://lms.example.com/products/omega",
+
+          "timestamp":"2013-01-28T09:08:16-04:00",
+
+          "contact":{
+
+            "email":"support@lms.example.com"
+
+          }
+
+        }
+
+      }
+
+    },
+
+    "service_owner":{
+
+      "@id":"http://state.university.edu/",
+
+      "timestamp":"2012-03-28T09:08:16-04:00",
+
+      "service_owner_name" : {
+
+        "default_value":"State University",
+
+        "key":"service_owner.name"
+
+      },
+
+      "description":{
+
+        "default_value":"A fictitious university.",
+
+        "key":"service_owner.description"
+
+      },
+
+      "support":{
+
+        "email":"techsupport@university.edu"
+
+      }
+
+    },
+
+    "support":{
+
+      "email":"techsupport@university.edu"
+
+    },
+
+    "service_provider":{
+
+      "@id":"http://yasp.example.com/ServiceProvider",
+
+      "guid":"yasp.example.com",
+
+      "timestamp":"2013-01-28T09:08:16-04:00",
+
+      "service_provider_name":{
+
+        "default_value":"Your Application Service Provider",
+
+        "key":"service_provider.name"
+
+      },
+
+      "description":{
+
+        "default_value":"YASP is a fictitious application service provider",
+
+        "key":"service_provider.description"
+
+      },
+
+      "support":{
+
+        "email":"support@yasp.example.com"
+
+      }
+
+    }
+
+  },
+
+  "capability_offered":[
+
+     "basic-lti-launch-request"
+
+  ],
+
+  "service_offered":[
+
+    {
+
+      "@type":"RestService",
+
+      "@id":":MyLTIService.all",
+
+      "endpoint":"http://lms.example.com/ltiservice/my/{contextId}",
+
+      "format":
+
+        [
+
+          "application/x-vnd.ims.lti.v1.myltiservice+json"
+
+        ],
+
+      "action":["GET"]
+
+    }
+
+  ]
+
+}
+
+
+
+
+
+
+
+</pre><p>&nbsp;</p><p>Figure 7.1 Sample Tool Consumer profile</p><p>The following tables identifies the correspondence between elements in the profile and parameters passed in a basic launch request.</p><table border="1" cellpadding="0" cellspacing="0"><thead><tr><th style="width:343px;"><p><strong>Profile name</strong></p></th><th style="width:273px;"><p><strong>Launch parameter name</strong></p></th></tr></thead><tbody><tr><td style="width:343px;"><p>lti_version</p></td><td style="width:273px;"><p>lti_version</p></td></tr><tr><td style="width:343px;"><p>product_instance/guid</p></td><td style="width:273px;"><p>tool_consumer_instance_guid</p></td></tr><tr><td style="width:343px;"><p>service_owner/product_name</p></td><td style="width:273px;"><p>tool_consumer_instance_name</p></td></tr><tr><td style="width:343px;"><p>service_owner/description</p></td><td style="width:273px;"><p>tool_consumer_instance_description</p></td></tr><tr><td style="width:343px;"><p>service_owner/support/email</p></td><td style="width:273px;"><p>tool_consumer_instance_contact_email</p></td></tr><tr><td style="width:343px;"><p>product_instance/product_info/product_family/code</p></td><td style="width:273px;"><p>tool_consumer_info_product_family_code</p></td></tr><tr><td style="width:343px;"><p>product_instance/product_info/product_version</p></td><td style="width:273px;"><p>tool_consumer_info_version</p></td></tr></tbody></table><p>The capability element is used to declare the message types supported by the Tool Consumer; for LTI 1 this should&nbsp; include at least &ldquo;basic-lti-launch-request&rdquo;.</p><p><img height="459" src="/sites/default/files/lti/ltiv1p2/images/ltiIMGv1p2pd-image006.gif" width="612"></img><br clear="ALL"></br>
+		Figure 7.2 contains an example profile which contains only the required elements.</p><p>Figure 7.2 - Minimal example of a Tool Consumer Profile</p><div class="toc-item-anchor"><a name="toc-18"></a></div><h2 class=" toc-headings">7.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Requests for a Tool Consumer Profile</h2><div class="toc-top-links"><a href="/specs/ltiv1p2/implementation-guide#table-of-contents" target="_blank">Move to top</a></div><p>A request for a Tool Consumer profile is made by sending a GET request to the URL provided in the requested custom parameter from a basic launch request for the same Tool Consumer.&nbsp; A query parameter should be added to the URL to specify the LTI version for which the profile is being requested; in this case a value of LTI-1p2 should be used. &nbsp;For example:</p><p>GET /lti/ToolConsumerProfile?lti_version=LTI-1p2 HTTP/1.0<br></br>
+		Host: lms.example.com<br></br>
+		Accept: application/vnd.ims.lti.v2.toolconsumerprofile+json</p><p>The response should be a JSON document that conforms to the <em>application/vnd.ims.lti.v2.toolconsumerprofile+json</em> media type (see Figure 7.1), for example:</p><p>HTTP/1.0 200 OK<br></br>
+		Date: Tue, 18 Oct 2013 12:34:56 GMT<br></br>
+		Content-Type: application/vnd.ims.lti.v2.toolconsumerprofile+json<br></br>
+		Content-Length: 2447<br></br>
+		Expires: Tue, 18 Nov 2013 12:34:56 GMT</p><p>The period of validity for the profile may be specified via the <em>Expires</em> header in the response.</p><p>If the request received is not for a valid URL then an appropriate HTTP erorr response code should be returned.&nbsp; For example,</p><p>HTTP/1.0 403 Forbidden<br></br>
+		Date: Tue, 18 Oct 2013 12:34:56 GMT</p><div class="toc-item-anchor"><a name="toc-19"></a></div><h2 class=" toc-headings">7.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LTI Services Offered</h2><div class="toc-top-links"><a href="/specs/ltiv1p2/implementation-guide#table-of-contents" target="_blank">Move to top</a></div><p>The &ldquo;service_offered&rdquo; object&nbsp; of the profile is used to declare the availability of LTI services offered by the Tool Consumer to the Tool Provider.&nbsp; It comprises the following name/value pairs:</p><ul><li>@type &ndash; the type of service, at present only REST services are supported;</li><li>@id &ndash; a URI which identifies this service instance;</li><li>endpoint &ndash; a URI template defining the REST endpoint for resource requests being made via this service (the URI should conform to the syntax in the proposed IETF standard [IETF, 12]);</li><li>format &ndash; the content (media) type(s) of resources which can accessed from this service;</li><li>action &ndash; the HTTP request actions supported by this service.</li></ul><p>See Figure 7.1 for an example of a service declaration.</p><div class="toc-item-anchor"><a name="toc-8"></a></div></div></LTIDocs></body></html>

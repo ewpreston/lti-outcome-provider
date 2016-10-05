@@ -1,0 +1,19 @@
+<AdditionalResources>
+  <AdditionalResource>
+    <Name>Entities</Name>
+    <Type>GSheet</Type>
+    <GoogleKey>1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM</GoogleKey>
+    <GID>0</GID>
+  </AdditionalResource>
+  <AdditionalResource>
+    <Name>Settings</Name>
+    <Type>GSheet</Type>
+    <GoogleKey>1pxpU28Kn6kTUJpvQn2AMBDa_BU4qCwc086pumhXt89Y</GoogleKey>
+    <GID>0</GID>
+  </AdditionalResource>
+  <AdditionalResource>
+    <Name>ProjectIntro</Name>
+    <Type>GDoc</Type>
+    <GoogleKey>13Pb8hekoPf00c1ppVgI8kP27sGg_qe5K-KEfRqZAeOE</GoogleKey>
+  </AdditionalResource>
+</AdditionalResources>

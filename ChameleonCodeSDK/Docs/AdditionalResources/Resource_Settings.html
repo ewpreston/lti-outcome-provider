@@ -1,0 +1,27 @@
+<html><head><Title>Settings Details
+                        </Title><script type="text/javascript">
+      function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+          }
+        }
+        rawFile.send(null);
+      }
+      
+    </script><link rel="shortcut icon" href="/Codee42Config/favicon.ico" /><link rel="stylesheet" type="text/css" href="https://eejai42.sdks.codeiverse.com//LTIToolsSDK/Docs/css/Style.css"></link><link rel="stylesheet" type="text/css" href="https://eejai42.sdks.codeiverse.com//LTIToolsSDK/Docs/css/bootstrap.css"></link><link rel="stylesheet" type="text/css" href="https://eejai42.sdks.codeiverse.com//LTIToolsSDK/Docs/css/font-awesome.min.css"></link><script type="text/javascript" src="https://eejai42.sdks.codeiverse.com//LTIToolsSDK/Docs/scripts/jquery-2.2.3.min.js"></script><script type="text/javascript" src="https://eejai42.sdks.codeiverse.com//LTIToolsSDK/Docs/scripts/bootstrap.js"></script></head><body><div class="pull-left"><a class="btn btn-info" href="../Resources/Index.html"><i class="fa fa-arrow-left"></i>
+                          Back to Resources
+                        </a></div><div class="pull-right"><a target="_blank" class="btn btn-info" href="https://docs.google.com/spreadsheets/d/1pxpU28Kn6kTUJpvQn2AMBDa_BU4qCwc086pumhXt89Y/edit#gid=0"><i class="fa fa-edit"></i>
+                          Edit
+                        </a></div><div style="clear: both"></div><h3>
+                        CSV RESOURCE:Settings</h3><pre id="jsonFile">
+                        FILE: "../../GoogleData/AdditionalResources/Settings.csv.xml.json"
+
+                      </pre><script>
+                        readTextFile("../../GoogleData/AdditionalResources/Settings.csv.xml.json", function(text){
+                          $('#jsonFile').html(text);
+                        });
+                      </script></body></html>

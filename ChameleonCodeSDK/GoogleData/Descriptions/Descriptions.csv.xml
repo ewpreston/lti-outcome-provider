@@ -1,0 +1,20 @@
+<Descriptions>
+  <Description>
+    <EntityType>Primary</EntityType>
+    <Name>SampleEntity</Name>
+    <DisplayName>Sample Entity</DisplayName>
+    <Description>This is a sample entity</Description>
+  </Description>
+  <Description>
+    <EntityType>Lookup</EntityType>
+    <Name>SampleEntityType</Name>
+    <DisplayName>Sample Entity Type</DisplayName>
+    <Description>A type of sample entity</Description>
+  </Description>
+  <Description>
+    <EntityType>Future</EntityType>
+    <Name>SomeFutureFeature</Name>
+    <DisplayName>Some Future Feature</DisplayName>
+    <Description>Some future thing</Description>
+  </Description>
+</Descriptions>

@@ -1,0 +1,71 @@
+<Settings>
+  <Setting>
+    <Name>ProjectName</Name>
+    <Value>LTI Tools</Value>
+    <Description>The name of the project</Description>
+  </Setting>
+  <Setting>
+    <Name>BaseNamespace</Name>
+    <Value>CODEiverse.LTITools</Value>
+    <Description>A reasonable base Namespace (to be used as a base namespace for code)</Description>
+  </Setting>
+  <Setting>
+    <Name>GoogleResourceList</Name>
+    <Value>Descriptions</Value>
+    <Description>A list of description resources</Description>
+    <Prefix>Description</Prefix>
+    <GoogleKey>1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM</GoogleKey>
+    <GID>0</GID>
+  </Setting>
+  <Setting>
+    <Name>GoogleResourceList</Name>
+    <Value>Properties</Value>
+    <Description>A list of attribute resource</Description>
+    <Prefix>Attributes</Prefix>
+    <GoogleKey>1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM</GoogleKey>
+    <GID>0</GID>
+  </Setting>
+  <Setting>
+    <Name>GoogleResourceList</Name>
+    <Value>SampleData</Value>
+    <Description>A list of sample values</Description>
+    <Prefix>SampleValues</Prefix>
+    <GoogleKey>1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM</GoogleKey>
+    <GID>0</GID>
+  </Setting>
+  <Setting>
+    <Name>GoogleResourceList</Name>
+    <Value>AdditionalResources</Value>
+    <Description>A list of additional resources</Description>
+    <GoogleKey>1z8dMBsR4IaKN9YV64sbbIuxguFqApaIyxKnkQv6MHnA</GoogleKey>
+    <GID>0</GID>
+  </Setting>
+  <Setting>
+    <Name>ChameleonCodeHostUri</Name>
+    <Value>https://eejai42.sdks.codeiverse.com/</Value>
+    <Description>The root path to the SDK Doc Host</Description>
+  </Setting>
+  <Setting>
+    <Name>ChameleonCodeSDKUri</Name>
+    <Value>LTIToolsSDK/</Value>
+    <Description>The relative path within the dochost</Description>
+    <Default_x0020_Value>ChameleonCode/</Default_x0020_Value>
+  </Setting>
+  <Setting>
+    <Name>ChameleonCodeSDKPath</Name>
+    <Value>lti-outcome-provider/ChameleonCodeSDK/</Value>
+    <Description>The physical path to the doc host folder relative to the CODEE_ROOT_PATH</Description>
+    <Default_x0020_Value>ChameleonCodeSDK\</Default_x0020_Value>
+  </Setting>
+  <Setting>
+    <Name>Language1</Name>
+    <Value>EN</Value>
+    <Description>The primary language</Description>
+    <Default_x0020_Value>EN</Default_x0020_Value>
+  </Setting>
+  <Setting>
+    <Name>Language2</Name>
+    <Description>Additional languages</Description>
+    <Default_x0020_Value>NA</Default_x0020_Value>
+  </Setting>
+</Settings>

@@ -1,0 +1,24 @@
+{
+  "Entities": {
+    "Entity": [
+      {
+        "EntityType": "Primary",
+        "Name": "SampleEntity",
+        "DisplayName": "Sample Entity",
+        "Description": "This is a sample entity"
+      },
+      {
+        "EntityType": "Lookup",
+        "Name": "SampleEntityType",
+        "DisplayName": "Sample Entity Type",
+        "Description": "A type of sample entity"
+      },
+      {
+        "EntityType": "Future",
+        "Name": "SomeFutureFeature",
+        "DisplayName": "Some Future Feature",
+        "Description": "Some future thing"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+Name,Value,Description,Default Value,Prefix,GoogleKey,GID
+ProjectName,LTI Tools,The name of the project,,,,
+BaseNamespace,CODEiverse.LTITools,A reasonable base Namespace (to be used as a base namespace for code),,,,
+GoogleResourceList,Descriptions,A list of description resources,,Description,1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM,0
+GoogleResourceList,Properties,A list of attribute resource,,Attributes,1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM,0
+GoogleResourceList,SampleData,A list of sample values,,SampleValues,1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM,0
+GoogleResourceList,AdditionalResources,A list of additional resources,,,1z8dMBsR4IaKN9YV64sbbIuxguFqApaIyxKnkQv6MHnA,0
+ChameleonCodeHostUri,https://eejai42.sdks.codeiverse.com/,The root path to the SDK Doc Host,,,,
+ChameleonCodeSDKUri,LTIToolsSDK/,The relative path within the dochost,ChameleonCode/,,,
+ChameleonCodeSDKPath,lti-outcome-provider/ChameleonCodeSDK/,The physical path to the doc host folder relative to the CODEE_ROOT_PATH,ChameleonCodeSDK\,,,
+Language1,EN,The primary language,EN,,,
+Language2,,Additional languages,NA,,,

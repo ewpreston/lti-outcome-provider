@@ -1,0 +1,4 @@
+EntityType,Name,DisplayName,Description,AttributesGoogleKey,AttributesGID,SampleValuesGoogleKey,SampleValuesGID
+Primary,SampleEntity,Sample Entity ,This is a sample entity,,,,
+Lookup,SampleEntityType,Sample Entity Type ,A type of sample entity,,,,
+Future,SomeFutureFeature,Some Future Feature ,Some future thing,,,,

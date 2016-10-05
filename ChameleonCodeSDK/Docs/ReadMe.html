@@ -1,0 +1,64 @@
+<html><head><Title>LTI Tools  - Chameleon Code Documentation
+          </Title><script type="text/javascript">
+      function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+          }
+        }
+        rawFile.send(null);
+      }
+      
+    </script><link rel="shortcut icon" href="/Codee42Config/favicon.ico" /><link rel="stylesheet" type="text/css" href="https://eejai42.sdks.codeiverse.com/LTIToolsSDK/Docs/css/Style.css"></link><link rel="stylesheet" type="text/css" href="https://eejai42.sdks.codeiverse.com/LTIToolsSDK/Docs/css/bootstrap.css"></link><link rel="stylesheet" type="text/css" href="https://eejai42.sdks.codeiverse.com/LTIToolsSDK/Docs/css/font-awesome.min.css"></link><script type="text/javascript" src="https://eejai42.sdks.codeiverse.com/LTIToolsSDK/Docs/scripts/jquery-2.2.3.min.js"></script><script type="text/javascript" src="https://eejai42.sdks.codeiverse.com/LTIToolsSDK/Docs/scripts/bootstrap.js"></script></head><body style="padding: 1em;"><h1>LTI Tools Chameleon Code Documentation
+        </h1><div class="container"><ul class="nav nav-pills"><li class="active"><a data-toggle="pill" href="#home">Google Docs 'Napkins'</a></li><li><a data-toggle="pill" href="#menu3">ODXML Data Model</a></li></ul><hr style="height: 1px;" /><div class="tab-content"><div id="home" class="tab-pane fade in active"><div class="row"><div class="col-md-12"><div style="margin: 1em; padding: 1em; border: solid 1px #555555"><div class="pull-right"><a target="_blank" class="btn btn-primary" href="https://docs.google.com/document/d/13Pb8hekoPf00c1ppVgI8kP27sGg_qe5K-KEfRqZAeOE/edit
+  "><i class="fa fa-edit"></i>
+                      Edit Working Document
+                    </a></div><div style="width: 100%; margin-left: auto; margin-right: auto;"><body class="c9"><h1 class="c4 c11" id="h.i7d2glweqigg"><span>LTI Tools</span></h1><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4"><span class="c0"><a class="c1" href="https://www.imsglobal.org/activity/learning-tools-interoperability" target="_blank">https://www.imsglobal.org/activity/learning-tools-interoperability</a></span></p><p class="c4 c5"><span></span></p><p class="c4"><span>Learning Tools Interoperability</span></p><p class="c4 c5"><span></span></p><p class="c4"><span class="c10">About this document</span></p><p class="c4"><span>This is a high level description of the project. &nbsp;Provide a &ldquo;sketch&rdquo; of what we want here. &nbsp;Draw a picture, take a photo with your cell phone, copy/paste it here. &nbsp;This is the english description of what we are trying to do. &nbsp;This is the wordsmithing part (not the code part) </span></p><p class="c4 c5"><span></span></p><p class="c4"><span>This is really just an open canvas at this point.</span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p><p class="c4"><span>EJ&rsquo;s Notes:</span></p><p class="c4"><span>There appear to be multiple version of the LTI Spec.</span></p><p class="c4"><span>Excerpt from: </span><span class="c0"><a class="c1" href="https://www.imsglobal.org/activity/learning-tools-interoperability" target="_blank">https://www.imsglobal.org/activity/learning-tools-interoperability</a></span></p><ul class="c12 lst-kix_k2kgxmcfvw9f-0 start"><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltimemv1p0" target="_blank">Membership Service v1.0</a></span><span class="c2">&nbsp;(24 May 2016)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/lticiv1p0" target="_blank">Content-Item Message v1.0</a></span><span class="c2">&nbsp;(24 May 2016)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltiv1p2" target="_blank">LTI v1.2</a></span><span class="c2">&nbsp;(5 January 2015)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltiomv1p0" target="_blank">Outcomes Management Service 1.0</a></span><span class="c2">&nbsp;(5 January 2015)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltiv2p0" target="_blank">LTI v2.0</a></span><span class="c2">&nbsp;(6 January 2014)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltiv1p1p1" target="_blank">LTI v1.1.1</a></span><span class="c2">&nbsp;(29 August 2012)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltiv1p1" target="_blank">LTI v1.1</a></span><span class="c2">&nbsp;(13 March 2012)</span></li><li class="c3 c8"><span class="c6"><a class="c1" href="https://www.imsglobal.org/specs/ltiv1p0" target="_blank">LTI v1.0</a></span><span class="c2">&nbsp;(17 May 2010)</span></li></ul><p class="c3"><span class="c2">I think we&rsquo;ll use LTI v1.2. The spec can be found here: </span><span class="c0 c7"><a class="c1" href="https://www.imsglobal.org/specs/ltiv1p2/implementation-guide" target="_blank">https://www.imsglobal.org/specs/ltiv1p2/implementation-guide</a></span></p><p class="c3 c5"><span class="c2"></span></p><p class="c4 c5"><span></span></p><p class="c4 c5"><span></span></p></body><hr /></div></div></div></div><div class="row"><div class="col-md-12"><h3>Administration</h3><div><p>
+                      This documentation represents an english descriptions of the shared data ('the facts')
+                      which have been shared in the Google Drive folder.  This includes Documents,
+                      Pictures, Spreasheets and more.  But it's just facts - the WHAT needs to happen.  It
+                      all starts with this <a target="_blank" href="https://docs.google.com/spreadsheets/d/1pxpU28Kn6kTUJpvQn2AMBDa_BU4qCwc086pumhXt89Y/edit#gid=0">
+                        Global Settings File
+                      </a>.  This settings file includes links
+                      to other shared resources (if you have permission to view or edit it).
+                    </p><p>
+                      The question of HOW this problem get's solved is a subsequent step in the process.
+                    </p><hr /></div></div></div><div class="row"><div class="col-md-4"><h3>Working Document (start here)</h3><p>
+                    The working document (displayed above) the first page that anyone reviewing this project will see.  It will grow and
+                    change along with the rest of the project.  The working document is just a google doc and can be edited by anyone with permission.
+                  </p><p>
+                    All of the google documents that make up this spec can be viewed/edited/managed below.
+                  </p><div><a target="_blank" hint="CLICK TO EDIT" class="btn btn-info" href="Resources/Index.html"><i class="fa fa-edit"></i>
+                      View All Google Resources
+                    </a></div></div><div class="col-md-4"><H3>
+                    The 'LTI Tools' Napkin Sketch Model
+                  </H3><p>
+                    There are currently 3 'Things' described in the CODEiverse Google Docs.
+                    If you have permission, the button below will allow you to see or edit the list of 'things'.
+                  </p><p><a target="_blank" hint="CLICK TO EDIT" class="btn btn-info" href="https://docs.google.com/spreadsheets/d/1X-WfpPrzR-Nje-k9SLM2H7HE7i9mtHmZqbAc2hF54AM/edit#gid=0"><i class="fa fa-edit"></i>
+                      Edit list of 'Things'
+                    </a></p><h3>Explorer</h3><p>
+                    Youc can also explore this list (interactively) here - with edit buttons on any page that has information
+                    that can be edited.
+                  </p><p><a class="btn btn-info" href="https://eejai42.sdks.codeiverse.com/LTIToolsSDK/DataModel/Entities.html"><i class="fa fa-sitemap"></i>
+                      Explore list of 'things'
+                    </a></p></div><div class="col-md-4 text-right"><h3 class="text-right">Build</h3><p>
+                    Any time you've made changes to the google documents, you can rebuild the project here.
+                  </p><br /><div><a class="btn btn-info" href="
+                        /Codee42/StartBuild?projectName=LTITools&scriptName=Cook&returnUrl=/LTIToolsSDK/Docs/ReadMe.html
+                      "><i class="fa fa-code-fork"></i> Build All Chameleon Code
+                    </a></div><br /><div><a class="btn btn-info" href="
+                        /Codee42/StartBuild?projectName=LTITools&scriptName=CookDocs&returnUrl=/LTIToolsSDK/Docs/ReadMe.html
+                      "><i class="fa fa-code-fork"></i> Just the Docs
+                    </a></div><br /><div><a href="/Codee42" class="btn btn-info"><i class="fa fa-code-fork"></i> Other Chameleon Code Options
+                    </a></div></div></div></div><div id="menu3" class="tab-pane fade"><p>
+                There are currently 0 entities in the <a href="DataModel/Entities.html">
+                  ODXML Data Model
+                </a>.  Much of the code in the project will derive from this model.
+              </p><h3>Suggested Entities</h3><p>
+                  The following entities are in the spreadsheet, but are not yet part of the 'formal' ODXML data model.
+                  The tech team will have access to scripts which will merge these items into the formal model.
+                </p><ol><li>SampleEntity<div><small></small><br /><br /></div></li><li>SampleEntityType<div><small></small><br /><br /></div></li><li>SomeFutureFeature<div><small></small><br /><br /></div></li></ol></div></div><div></div><p></p><p></p><p></p></div></body></html><script type="text/javascript">CRISP_WEBSITE_ID = "c00a56e6-c84d-4c0e-9c97-d106b03fabc7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
